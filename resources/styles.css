@@ -1,0 +1,39 @@
+#result {
+  font-size: 80;
+  text-length: 32;
+  text-anchor: middle;
+  x: 52%;
+  y: 58%;
+  fill: white;
+  font-family: 'Fabrikat-Bold'
+}
+
+#selected-die {
+  font-size: 40;
+  text-length: 32;
+  text-anchor: start;
+  x: 20%;
+  y: 26%;
+  fill: white;
+  font-family: 'Tungsten-Medium'
+}
+
+#dice {
+  width: 50%;
+  height: 50%;
+  y: 28%;
+  x: 24%;
+}
+
+#dice-type {
+  y: 0%;
+  x: 0%;
+}
+
+.hidden {
+  display: none;
+}
+
+.background {
+  viewport-fill: #b7a275;
+}

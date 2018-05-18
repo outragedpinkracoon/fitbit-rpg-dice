@@ -1,0 +1,18 @@
+{
+  "fitbit": {
+    "appUUID": "539eeb59-356b-4e80-a130-6154c959af21",
+    "appType": "app",
+    "appDisplayName": "RPG Dice Set",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#673ab7",
+    "requestedPermissions": [],
+    "buildTargets": [
+      "meson"
+    ],
+    "i18n": {
+      "en": {
+        "name": "RPG Dice Set"
+      }
+    }
+  }
+}
