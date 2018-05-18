@@ -1,0 +1,6 @@
+<svg class='background'>
+  <image id='dice-tray' href='images/dice_tray.png' load='sync'/>
+  <text id='result' pointer-events='visiblePainted'/>
+  <image id='dice' class='lol' href='images/d4.png' load='sync' pointer-events='visiblePainted' />
+  <text id='selected-die'>d4</text>
+</svg>
