@@ -1,7 +1,7 @@
 
 import document from 'document' // eslint-disable-line import/no-unresolved
 import detectMove from '../common/detectMove'
-import randomBetween from '../common/utils'
+import randomBetween from '../common/math_utils'
 
 const resultLabel = document.getElementById('result')
 const selectedDieLabel = document.getElementById('selected-die')
