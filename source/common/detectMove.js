@@ -1,15 +1,17 @@
+/* eslint no-param-reassign: 0 */ // --> OFF
+/* eslint func-names: 0 */ // --> OFF
 const detectMove = (element, callbacks) => {
-  let y,x = 0
+  let y; let x = 0
 
-  element.onmousedown = function(evt) {
+  element.onmousedown = function (evt) {
     y = evt.screenY
     x = evt.screenX
   }
-  
-  element.onmouseup = function(evt) {
-    let yMove = evt.screenY-y
-    let xMove = evt.screenX-x
-    
+
+  element.onmouseup = function (evt) {
+    const yMove = evt.screenY - y
+    const xMove = evt.screenX - x
+
     const tolerance = 40
     if (yMove < -tolerance) {
       callbacks.swipeUp()
@@ -18,7 +20,7 @@ const detectMove = (element, callbacks) => {
     if (yMove > tolerance) {
       callbacks.swipeDown()
     }
-    
+
     if (xMove < -tolerance) {
       callbacks.swipeLeft()
     }

@@ -1,6 +1,7 @@
-import document from 'document'
+
+import document from 'document' // eslint-disable-line import/no-unresolved
 import detectMove from '../common/detectMove'
-import * as utils from '../common/utils'
+import randomBetween from '../common/utils'
 
 const resultLabel = document.getElementById('result')
 const selectedDieLabel = document.getElementById('selected-die')
@@ -8,20 +9,20 @@ const selectedDieLabel = document.getElementById('selected-die')
 const diceType = [4, 6, 8, 10, 12, 20, 100]
 let selectedDieIndex = 0
 
-let dice = document.getElementById('dice')
+const dice = document.getElementById('dice')
 
 const updateSelectedDieIndex = () => {
-  selectedDieIndex++
-  if(selectedDieIndex > diceType.length - 1) {
+  selectedDieIndex += 1
+  if (selectedDieIndex > diceType.length - 1) {
     selectedDieIndex = 0
   }
 }
 
 const selectDie = () => {
   updateSelectedDieIndex()
-  let nextDie = diceType[selectedDieIndex]
+  const nextDie = diceType[selectedDieIndex]
   dice.href = `images/d${nextDie}.png`
-  selectedDieLabel.text = 'd'+nextDie
+  selectedDieLabel.text = `d${nextDie}`
 }
 
 const hideResultLabel = () => {
@@ -29,8 +30,8 @@ const hideResultLabel = () => {
   dice.style.visibility = 'visible'
 }
 
-const rollDie = (die) => {
-  let diceResult = utils.randomBetween(1,diceType[selectedDieIndex])
+const rollDie = () => {
+  const diceResult = randomBetween(1, diceType[selectedDieIndex])
   dice.style.visibility = 'hidden'
   resultLabel.text = diceResult
 }
@@ -39,14 +40,12 @@ detectMove(dice, {
   swipeUp: selectDie,
   swipeDown: selectDie,
   swipeLeft: rollDie,
-  swipeRight: rollDie
+  swipeRight: rollDie,
 })
 
 detectMove(resultLabel, {
   swipeUp: hideResultLabel,
   swipeDown: hideResultLabel,
   swipeLeft: hideResultLabel,
-  swipeRight: hideResultLabel
+  swipeRight: hideResultLabel,
 })
-
-
