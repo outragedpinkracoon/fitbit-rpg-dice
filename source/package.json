@@ -7,12 +7,17 @@
     "wipeColor": "#673ab7",
     "requestedPermissions": [],
     "buildTargets": [
-      "meson"
+      "meson",
+      "gemini"
     ],
     "i18n": {
       "en": {
         "name": "RPG Dice Set"
       }
-    }
+    },
+    "defaultLanguage": "en-US"
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~3.1.0"
   }
 }
